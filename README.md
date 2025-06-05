@@ -32,6 +32,8 @@ A COMMS link interface was used as it generates 12 Volt RS232 signals needed to 
 </div>
 <BR>
 
+When using the COMMS Link cable for extended periods, a mains adaptor is highly recomended due to the relatively high current consumption of the classic COMMS Link adaptor. A mains adaptor can be connected via the Barrel Jack connector in the COMMS Link. The power supply voltage is 10.4 Volts DC nominal.
+
 <BR>
 
 ## Installation
