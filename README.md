@@ -18,7 +18,7 @@ This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <
 <br>  
 
 ## Use Case
-Presented in this repository is straightforward logging application written in OPL that uses and configures the COMMS link to record data from a multimeter. In the example image, batteries are under test to determine the useful life on the target device. As the terminal voltage of the (typically Alkaline) battery falls the program monitors the measured voltage to determine if the data should be appended to the logging file.
+Presented in this repository is straightforward logging application written in OPL that uses and configures the <a href="https://www.jaapsch.net/psion/mancomms2.htm">COMMS Link</a> to record data from a multimeter. In the example image, batteries are under test to determine the useful life on the target device. As the terminal voltage of the (typically Alkaline) battery falls the program monitors the measured voltage to determine if the data should be appended to the logging file.
 
 <BR>
 
