@@ -23,7 +23,7 @@ Presented in this repository is straightforward logging application written in O
 <BR>
 
 ## Connection
-A COMMS link interface was used as it generates 12 Volt RS232 signals needed to power the Infra Red connection module used to communicate with the multimeter. A <a href="https://en.wikipedia.org/wiki/Null_modem">Null Modem</a> connection is required to effect communication. The connection parameters were 9600 baud, 8 databits, 1 stop bit, no parity, no flow control and <CR> end of line terminator. The Null Modem connection can be implemented at the DB 25 or DE 9 Pin connectors. The data strings from the multimeter are relatively short (typically < 20 characters) and relatively infrequent (typically a few seconds interval), well within the RS232 buffer capacity of the Organiser 2 device.
+A COMMS link interface was used as it generates 12 Volt RS232 signals needed to power the Infra Red connection module used to communicate with the multimeter. A <a href="https://en.wikipedia.org/wiki/Null_modem">Null Modem</a> connection is required to effect communication. The connection parameters were 9600 baud, 8 data bits, 1 stop bit, no parity, no flow control and <CR> end of line terminator, these parameters are configured in the OPL code. The Null Modem connection can be implemented at the DB 25 or DE 9 Pin connectors. The data strings from the multimeter are relatively short (typically < 20 characters) and relatively infrequent (typically a few seconds interval), well within the RS232 buffer capacity of the Organiser 2 device.
 
 <BR>
 
