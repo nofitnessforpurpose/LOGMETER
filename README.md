@@ -23,7 +23,7 @@ Presented in this repository is straightforward logging application written in O
 <BR>
 
 ## Connection
-A COMMS link interface was used as it generates 12 Volt RS232 signals needed to power the Infra Red connection module used to communicate with the multimeter. A <a href="https://en.wikipedia.org/wiki/Null_modem">Null Modem</a> connection is required to effect communication. The connection parameters were 9600 baud, 8 data bits, 1 stop bit, no parity, no flow control and <CR> end of line terminator, these parameters are configured in the OPL code. The Null Modem connection can be implemented at the DB 25 or DE 9 Pin connectors. The data strings from the multimeter are relatively short (typically < 20 characters) and relatively infrequent (typically a few seconds interval), well within the RS232 buffer capacity of the Organiser 2 device.
+A COMMS link interface was used as it generates 12 Volt RS232 signals needed to power, via the DTR and RTS lines, the Infra Red connection module used to communicate with the multi-meter. A <a href="https://en.wikipedia.org/wiki/Null_modem">Null Modem</a> connection is required to effect communication. The connection parameters were 9600 baud, 8 data bits, 1 stop bit, no parity, no flow control and <CR> end of line terminator, these parameters are configured in the OPL code. The Null Modem connection can be implemented at the DB 25 or DE 9 Pin connectors. The data strings from the multimeter are relatively short (typically < 20 characters) and relatively infrequent (typically a few seconds interval), well within the RS232 buffer capacity of the Organiser 2 device.
 
 <BR>
 
@@ -32,10 +32,32 @@ Download the single OPL file onto the target device, typically via a Serial COMM
 
 <BR>
 
+## Protocol
+The multi-meter protocol comprises two letter upper case ASCII text commands and the response (CMD_ACK) is an ASCII 0 (command OK) or 1 (command or syntax error). Both commands and acknoledgements are follwed by a < CR > (carriage return).  
+
+Commands are:  
+| Command | Comment |  
+|----|-----------------------------------------------------------|
+| DS | Initiate instrument power cycle process |   
+| QM | Intiate instrument measurement and response process |  
+| RI | Reset all instrument settings to factory (excluding calibrations) |  
+| SF | Initiate Special Function key press |  
+
+Only the first two commands, DS & QM are utlised.
+
+The response to the QM command is of the form:  
+QM,+09.001 V DC< CR >
+
+Which will be logged as:  
+SUN 01 JAN 1989 16:49:45, QM,+06.764 V DC  
+
+High speed logging is limited by the instrument performance, though fast peak capture modes allows capture of short duratation events. To be read out via the infra red interface at low data rates ~960 characters per second.
+<BR>
+
 ## Considerations
-The code does not currently attempt to detect if there is sufficent room on the data pack.  
+The code does not currently attempt to detect if there is sufficient room on the data pack.  
 File names and storage locations are hard coded.  
-The Organiser 2 file system does not permit file extentions.  
+The Organiser 2 file system does not permit file extensions.  
 File locations are A: through D:  
 File names are 8 characters long, starting with the letter A through Z.  
 See Notes below.  
