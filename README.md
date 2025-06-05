@@ -18,15 +18,26 @@ This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <
 <br>  
 
 ## Use Case
-Presented in this repository is straightforward logging application written in OPL that configures and uses the COMMS link to record data from a multimeter. In the example image, batteries are under test to determine the useful life on the target device. As the terminal voltage of the (typically Alkaline) battery falls the program monitors the measured voltage to determine if the data should be appended to the logging file.
+Presented in this repository is straightforward logging application written in OPL that uses and configures the COMMS link to record data from a multimeter. In the example image, batteries are under test to determine the useful life on the target device. As the terminal voltage of the (typically Alkaline) battery falls the program monitors the measured voltage to determine if the data should be appended to the logging file.
 
+<BR>
+
+## Connection
+A COMMS link interface was used as it generates 12 Volt RS232 signals needed to power the Infra Red connection module used to communicate with the multimeter. A <a href="https://en.wikipedia.org/wiki/Null_modem">Null Modem</a> connection is required to effect communication. The connection parameters were 9600 baud, 8 databits, 1 stop bit, no parity, no flow control and <CR> end of line terminator. The Null Modem connection can be implemented at the DB 25 or DE 9 Pin connectors. The data strings from the multimeter are relatively short (typically < 20 characters) and relatively infrequent (typically a few seconds interval), well within the RS232 buffer capacity of the Organiser 2 device.
+
+<BR>
+
+## Installation
+Download the single OPL file onto the target device, typically via a Serial COMMS connection and terminal program. Tranlsate the OPL file. Connect to the target multi-meter and run. Logging will commence following initialisation of the code.
 
 <BR>
 
 ## Considerations
-The code does not attempt to detect if there is sufficent room on the data pack.  
-The Organiser 2 file system does not permit file extentions. 
-File names are 8 characters long, starting with the letter A through Z.
+The code does not currently attempt to detect if there is sufficent room on the data pack.  
+File names and storage locations are hard coded.  
+The Organiser 2 file system does not permit file extentions.  
+File locations are A: through D:  
+File names are 8 characters long, starting with the letter A through Z.  
 See Notes below.  
 
 <BR>
