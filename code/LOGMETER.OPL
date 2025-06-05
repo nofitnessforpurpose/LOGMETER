@@ -24,9 +24,9 @@ nv = 0.0
 data$ = "None"
 lsamp$ = ""
 lgfname$ = "B:LOGFILE"
-ONERR nocomms::
+ONERR NOCOMMS::
 LSET:(9600,0,8,1,0,1,80,CHR$(13),-1,CHR$(13),-1,"",-1,-1)
-nocomms::
+NOCOMMS::
 IF (ERR > 0)
   AT 4,1 :PRINT "Error :";ERR$(ERR)
   GET
@@ -64,14 +64,14 @@ WHILE 1
     PAUSE 20
     REM GET
     LPRINT "DS";CHR$(13);
-    REM EMmpty buffer
+    REM Empty buffer
     WHILE 1
       data$ = LINPUT$:(254,2)
       IF data$ = "" :BREAK :ENDIF
     ENDWH
   ELSE
     REM QM data$ was good
-    REM Ignore conversio errors
+    REM Ignore conversion errors
     ONERR BADSTR::
     nv = VAL(MID$(data$,4,7))
     BADSTR::
