@@ -25,6 +25,13 @@ Presented in this repository is straightforward logging application written in O
 ## Connection
 A COMMS link interface was used as it generates 12 Volt RS232 signals needed to power, via the DTR and RTS lines, the Infra Red connection module used to communicate with the multi-meter. A <a href="https://en.wikipedia.org/wiki/Null_modem">Null Modem</a> connection is required to effect communication. The connection parameters were 9600 baud, 8 data bits, 1 stop bit, no parity, no flow control and <CR> end of line terminator, these parameters are configured in the OPL code. The Null Modem connection can be implemented at the DB 25 or DE 9 Pin connectors. The data strings from the multimeter are relatively short (typically < 20 characters) and relatively infrequent (typically a few seconds interval), well within the RS232 buffer capacity of the Organiser 2 device.
 
+<div align="center">
+  <div style="display: flex; align-items: flex-start;">
+  <img src="https://github.com/nofitnessforpurpose/LOGMETER/blob/main/images/20250605_COMMS_LINK.jpg?raw=true" width="400px" alt="NotFitForPurpose Image copyright (c) 01 June 2025 nofitnessforpurpose All Rights Reserved">
+  </div>
+</div>
+<BR>
+
 <BR>
 
 ## Installation
