@@ -48,13 +48,14 @@ Commands are:
 | Command | Comment |  
 |----|-----------------------------------------------------------|
 | DS | Initiate instrument power cycle process |   
-| QM | Intiate instrument measurement and response process |  
+| QM | Initiate instrument measurement and response process |  
 | RI | Reset all instrument settings to factory (excluding calibrations) |  
-| SF | Initiate Special Function key press |  
+| SF | Initiate Special Function Key press |  
 
 Only the first two commands, DS & QM are utlised.
 
-The response to the QM command is of the form:  
+The response to the QM command takes two parts a status response followed by the measurement if the command syntax is correct e.g.:  
+0< CR >
 QM,+09.001 V DC< CR >
 
 Which will be logged as:  
