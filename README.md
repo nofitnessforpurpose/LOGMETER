@@ -55,8 +55,8 @@ Commands are:
 Only the first two commands, DS & QM are utlised.
 
 The response to the QM command takes two parts a status response followed by the measurement if the command syntax is correct e.g.:  
-0< CR >
-QM,+09.001 V DC< CR >
+0< CR >  
+QM,+09.001 V DC< CR >  
 
 Which will be logged as:  
 SUN 01 JAN 1989 16:49:45, QM,+06.764 V DC  
