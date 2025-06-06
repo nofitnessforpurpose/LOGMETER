@@ -61,7 +61,8 @@ QM,+09.001 V DC< CR >
 Which will be logged as:  
 SUN 01 JAN 1989 16:49:45, QM,+06.764 V DC  
 
-High speed logging is limited by the instrument performance, though fast peak capture modes allows capture of short duratation events. To be read out via the infra red interface at low data rates ~960 characters per second.
+High speed logging is limited by the instrument performance, though fast peak capture modes allows capture of short duratation events. To be read out via the infra red interface at low data rates ~960 characters per second.  
+
 <BR>
 
 ## Considerations
