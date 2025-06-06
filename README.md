@@ -1,5 +1,5 @@
 # LOG METER
-Log multi-meter measurements over Infra Red couples RS232 connection to a file.
+Log multi-meter measurements over Infra Red coupled RS232 connection to a file.
 
 This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <a href="https://en.wikipedia.org/wiki/Open_Programming_Language">OPL progam</a> periodically queries the multimeter and dependant on change or period logs the data a file.
 
