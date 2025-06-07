@@ -18,12 +18,12 @@ This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <
 <br>  
 
 ## Use Case
-Presented in this repository is straightforward logging application written in OPL that uses and configures the <a href="https://www.jaapsch.net/psion/mancomms2.htm">COMMS Link</a> to record data from a multimeter. In the example image, batteries are under test to determine the useful life on the target device. As the terminal voltage of the (typically Alkaline) battery falls the program monitors the measured voltage to determine if the data should be appended to the logging file.
+Presented in this repository is a straightforward logging application written in OPL that uses and configures the <a href="https://www.jaapsch.net/psion/mancomms2.htm">COMMS Link</a> to record data from a multi-meter. In the example image, batteries are under test to determine the useful life on the target device. As the terminal voltage of the (typically Alkaline) battery falls the program monitors the measured voltage to determine if the data should be appended to the logging file.
 
 <BR>
 
 ## Connection
-A COMMS link interface was used as it generates 12 Volt RS232 signals needed to power, via the DTR and RTS lines, the Infra Red connection module used to communicate with the multi-meter. A <a href="https://en.wikipedia.org/wiki/Null_modem">Null Modem</a> connection is required to effect communication. The connection parameters were 9600 baud, 8 data bits, 1 stop bit, no parity, no flow control and <CR> end of line terminator, these parameters are configured in the OPL code. The Null Modem connection can be implemented at the DB 25 or DE 9 Pin connectors. The data strings from the multimeter are relatively short (typically < 20 characters) and relatively infrequent (typically a few seconds interval), well within the RS232 buffer capacity of the Organiser 2 device.
+A COMMS link interface was used as it generates 12 Volt RS232 signals needed to power, via the DTR and RTS lines, the Infra Red connection module used to communicate with the multi-meter. A <a href="https://en.wikipedia.org/wiki/Null_modem">Null Modem</a> connection is required to effect communication. The connection parameters were 9600 baud, 8 data bits, 1 stop bit, no parity, no flow control and <CR> end of line terminator, these parameters are configured in the OPL code. The Null Modem connection can be implemented at the DB 25 or DE 9 Pin connectors. The data strings from the multi-meter are relatively short (typically < 20 characters) and relatively infrequent (typically a few seconds interval), well within the RS232 buffer capacity of the Organiser 2 device.
 
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
@@ -32,17 +32,17 @@ A COMMS link interface was used as it generates 12 Volt RS232 signals needed to 
 </div>
 <BR>
 
-When using the COMMS Link cable for extended periods, a mains adaptor is highly recomended due to the relatively high current consumption of the classic COMMS Link adaptor. A mains adaptor can be connected via the Barrel Jack connector in the COMMS Link. The power supply voltage is 10.4 Volts DC nominal.
+When using the COMMS Link cable for extended periods, a mains adaptor is highly recommended due to the relatively high current consumption of the classic COMMS Link adaptor. A mains adaptor can be connected via the Barrel Jack connector in the COMMS Link. The power supply voltage is 10.4 Volts DC nominal.
 
 <BR>
 
 ## Installation
-Download the single OPL file onto the target device, typically via a Serial COMMS connection and terminal program. Tranlsate the OPL file. Connect to the target multi-meter and run. Logging will commence following initialisation of the code.
+Download the single OPL file onto the target device, typically via a Serial COMMS connection and terminal program. Translate the OPL file. Connect to the target multi-meter and run. Logging will commence following initialisation of the code.
 
 <BR>
 
 ## Protocol
-The multi-meter protocol comprises two letter upper case ASCII text commands and the response (CMD_ACK) is an ASCII 0 (command OK) or 1 (command or syntax error). Both commands and acknoledgements are follwed by a < CR > (carriage return).  
+The multi-meter protocol comprises two letter upper case ASCII text commands and the response (CMD_ACK) is an ASCII 0 (command OK) or 1 (command or syntax error). Both commands and acknowledgements are followed by a < CR > (carriage return).   
 
 Commands are:  
 | Command | Comment |  
@@ -52,7 +52,7 @@ Commands are:
 | RI | Reset all instrument settings to factory (excluding calibrations) |  
 | SF | Initiate Special Function Key press |  
 
-Only the first two commands, DS & QM are utlised.
+Only the first two commands, DS & QM are utilised.
 
 The response to the QM command takes two parts a status response followed by the measurement if the command syntax is correct e.g.:  
 0< CR >  
@@ -61,7 +61,7 @@ QM,+09.001 V DC< CR >
 Which will be logged as:  
 SUN 01 JAN 1989 16:49:45, QM,+06.764 V DC  
 
-High speed logging is limited by the instrument performance, though fast peak capture modes allows capture of short duratation events. To be read out via the infra red interface at low data rates ~960 characters per second.  
+High speed logging is limited by the instrument performance, though fast peak capture modes allows capture of short duration events. To be read out via the infra red interface at low data rates ~960 characters per second.  
 
 <BR>
 
