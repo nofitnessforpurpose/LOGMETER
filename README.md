@@ -84,7 +84,7 @@ Explanation:
   
 Make sure your cell format is set to Date & Time, so it displays correctly.
 
-A scatter plot is utilised due to the dynamic logging technique employed as a data reduction technique in the logged file.  
+An XY scatter plot is utilised due to the dynamic logging technique employed as a data reduction technique in the logged file.  
 
 <BR>
 
