@@ -37,7 +37,9 @@ When using the COMMS Link cable for extended periods, a mains adaptor is highly 
 <BR>
 
 ## Installation
-Download the single OPL file onto the target device, typically via a Serial COMMS connection and terminal program. Translate the OPL file. Connect to the target multi-meter and run. Logging will commence following initialisation of the code.
+Download the single OPL file onto the target device, typically via a Serial COMMS connection and terminal program. Translate the OPL file. Connect to the target multi-meter and run. Logging will commence following initialisation of the code.  
+
+The code is targeted to run on a 4 line LZ or LZ64 device to use the additional screen size. However, other than display text there are no LZ specific features that would preclude adaptation to a CM, XP or other Organiser II model.
 
 <BR>
 
