@@ -71,7 +71,7 @@ High speed logging is limited by the instrument performance, though fast peak ca
 
 ## Plotting data  
 Importing data into a tool such as Excel can use the comma seperated import filter
-Assuming the date portion of the data is located in CELL A1 the fomulae to represent the date, so it can act as the X axis of any scatter plots, is:
+Assuming the date portion of the data is located in CELL A1 the fomulae to represent the date, so it can act as the X axis of a scatter plots, is:
 
 ```  
 =DATEVALUE(MID(A1,5,11)) + TIMEVALUE(RIGHT(A1,8))  
@@ -83,6 +83,8 @@ Explanation:
   DATEVALUE(...) and TIMEVALUE(...) convert the extracted parts into a proper date-time format.  
   
 Make sure your cell format is set to Date & Time, so it displays correctly.
+
+A scatter plot is utilised due to the dynamic logging technique employed as a data reduction technique in the logged file.  
 
 <BR>
 
