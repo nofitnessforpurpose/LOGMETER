@@ -72,15 +72,17 @@ High speed logging is limited by the instrument performance, though fast peak ca
 ## Plotting data  
 Importing data into a tool such as Excel can use the comma seperated import filter
 Assuming the date portion of the data is located in CELL A1 the fomulae to represent the date, so it can act as the X axis of any scatter plots, is:
-  
+
+```  
 =DATEVALUE(MID(A1,5,11)) + TIMEVALUE(RIGHT(A1,8))  
+```    
   
 Explanation:  
   MID(A1,5,11): Extracts the relevant date portion from "SUN 01 JAN 1989 16:49:45", ignoring the day abbreviation.  
   RIGHT(A1,8): Extracts the time portion.  
   DATEVALUE(...) and TIMEVALUE(...) convert the extracted parts into a proper date-time format.  
   
-Make sure your cell format is set to Date & Time so it displays correctly.
+Make sure your cell format is set to Date & Time, so it displays correctly.
 
 <BR>
 
