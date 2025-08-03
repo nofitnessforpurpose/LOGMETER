@@ -82,9 +82,22 @@ Explanation:
   RIGHT(A1,8): Extracts the time portion.  
   DATEVALUE(...) and TIMEVALUE(...) convert the extracted parts into a proper date-time format.  
   
-Make sure your cell format is set to Date & Time, so it displays correctly.
+Make sure your cell format is set to Date & Time, so it displays correctly.  
 
-An XY scatter plot is utilised due to the dynamic logging technique employed as a data reduction technique in the logged file.  
+
+The Voltage value can be obained via the following forumlae:  
+
+``` 
+=VALUE(MID(C3,1,FIND(" ", C3, 1)))
+```
+
+Explanation:    
+  Uses the FIND feature to locate the seperating space character that seperates the value data from the remaining measurement settings e.g. '+0.9123 V DC' locates the first space character from the left. The MID feature then knows the end location of the value data and the VAULE feature converts the extracted string to a number representation.  
+
+Make sure your cell format is set to General or Number,  so it displays correctly.  
+
+
+An XY scatter plot is utilised due to the dynamic logging technique employed as a data reduction technique for the logged file (LOGFILE).  
 
 <BR>
 
