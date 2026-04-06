@@ -5,7 +5,7 @@ This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <
 
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
-  <img src="https://github.com/nofitnessforpurpose/LOGMETER/blob/main/images/2025-06-03-METLOGGER-02.jpg?raw=true" width="400px" alt="NotFitForPurpose Image copyright (c) 01 June 2025 nofitnessforpurpose All Rights Reserved">
+  <img src="https://github.com/nofitnessforpurpose/LOGMETER/blob/main/images/2025-06-03-METLOGGER-02.jpg" width="400px" alt="NotFitForPurpose Image copyright (c) 01 June 2025 nofitnessforpurpose All Rights Reserved">
   </div>
 </div>
 <BR>
@@ -27,7 +27,7 @@ A COMMS link interface was used as it generates 12 Volt <a href="https://en.wiki
 
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
-  <img src="https://github.com/nofitnessforpurpose/LOGMETER/blob/main/images/20250605_COMMS_LINK.jpg?raw=true" width="400px" alt="NotFitForPurpose Image copyright (c) 01 June 2025 nofitnessforpurpose All Rights Reserved">
+  <img src="https://github.com/nofitnessforpurpose/LOGMETER/blob/main/images/20250605_COMMS_LINK.jpg" width="400px" alt="NotFitForPurpose Image copyright (c) 01 June 2025 nofitnessforpurpose All Rights Reserved">
   </div>
 </div>
 <BR>
